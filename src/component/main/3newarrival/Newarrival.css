@@ -1,0 +1,129 @@
+.newarrival{
+    padding: 50px 0;
+    background: linear-gradient(to bottom, #f9f4d4, white);
+}
+.newarrivalTop{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    
+}   
+.newarrivalTop h1{
+    font-weight: 400;
+    font-size: 2rem !important;
+}   
+.newarrivalTop h1 span{ 
+    color: #14b1f0;
+}  
+.newarrivalTop img{ 
+    border-bottom: 1px solid #14b1f0;
+    padding-bottom: 5px;
+}  
+.newarrivalmini1{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+}
+.newarrivalmini1 > div{
+    transform: scale(0.9);
+    transition: all .4s linear;
+    background-color: white;
+}
+
+
+/* first animation */
+.newarrivalmini1 >div:nth-child(1):hover{
+    transform: scale(1);
+}
+.newarrivalmini1 >div:nth-child(2):hover{
+    transform: scale(1);
+}
+.newarrivalmini1 >div:nth-child(3):hover{
+    transform: scale(1);
+}
+.newarrivalmini1 >div:nth-child(4):hover{
+    transform: scale(1);
+}
+.newarrivalmini1 >div:nth-child(5):hover{
+    transform: scale(1);
+}
+.newarrivalmini1 >div:nth-child(6):hover{
+    transform: scale(1);
+}
+
+
+
+
+.newarrivalmini{
+    padding: 10px;
+    padding-top: 20%;
+    border-radius: 12px;
+    border: 1px solid gray;
+    height: 100%;
+    width: 100% !important;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: space-between;
+    overflow: hidden;
+    position: relative;
+}
+.newarrivalmini p:first-child{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #e1f2f9;
+    width: 100%;
+    /* height: 10%; */
+    padding: 5px;
+    text-align: center;
+}
+.newarrivalmini p:last-child{
+    color: #14b1f0;
+}
+.newarrivalmini > div:last-child div{
+    color: #14b1f0;
+}
+.newarrivalmini > div:last-child{
+    text-align: center;
+}
+.newarrivalmini strike{
+    width: 100%;
+}
+.newarrivalmini button{
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    outline-color: invert;
+    background-color: #15ADB7;
+    width: 100% ;
+    color: white;
+}
+.newarrivalmini button:hover{
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.521);
+}
+.newarrivalmini button:active{
+    box-shadow: none;
+}
+
+
+@media (max-width:390px){
+    .newarrivalmini1 > div{
+        /* width: 100%; */
+    }
+}
+
+@media (max-width:786px){
+    .newarrivalTop{
+        flex-direction: column;
+    }
+    .newarrivalmini1{
+        justify-content: center;
+    }
+    
+}
+
