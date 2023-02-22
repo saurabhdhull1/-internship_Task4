@@ -22,6 +22,9 @@
   gap: 5px;
   /* width: 50vw; */
 }
+.Navsearch button{
+  width: 20%;
+}
 .Navsearch form {
   width: 100% !important;
 }

@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Carousel1 from "./1carouser1/Carousel1";
 import Dealday from "./2Dealday/Dealday";
 import Newarrival from "./3newarrival/Newarrival";
 import Ourproduct from "./4ourproduct/Ourproduct";
 import Bestdeal from "./5bestdeal/Bestdeal";
+import Last from "./6last/Last";
+import Footer from "./footer/Footer";
 import "./Main.css";
 
 function Main() {
@@ -34,8 +36,30 @@ function Main() {
     },
   ];
 
+  // Dark mode
+
+  const moon = <i class="bi bi-moon-stars"></i>;
+  const sun = <i class="bi bi-brightness-high"></i>;
+
+  const [handelDark, sethandelDark] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  const handleClick = () => {
+    sethandelDark(!handelDark);
+    setIsDarkMode(!isDarkMode);
+
+    // document
+    //   .querySelector(":root")
+    //   .style.setProperty("--main-color", "red");
+  };
+
   return (
-    <div>
+    <div className={isDarkMode ? "mode dark-mode" : "mode"}>
+      {/* !Dark mode div  */}
+      <div className="darkmode" onClick={handleClick}>
+        {handelDark ? sun : moon}
+      </div>
+
       {/* !CarouselTop  */}
 
       <div
@@ -201,20 +225,24 @@ function Main() {
       </div>
 
       {/* ! Deal Day*/}
-
+      <hr />
       <Dealday />
+      <hr />
 
       {/* ! New arrivals*/}
 
       <Newarrival />
+      <hr />
 
       {/* ! Our products*/}
 
       <Ourproduct />
+      <hr />
 
       {/* ! Best deals*/}
 
       <Bestdeal />
+      <hr />
 
       {/* ! Winmart*/}
 
@@ -225,25 +253,37 @@ function Main() {
           </div>
         </div>
       </div>
+      <hr />
 
       {/* ! New Arivals*/}
       <div className="container-fluid">
         <div className="row arrival1">
           <div className="col-md-12">
-          <h1><span>New </span>Arrivals</h1>
+            <h1>
+              <span>New </span>Arrivals
+            </h1>
           </div>
         </div>
         <div className="arrival2">
-          <div><img src="newarival1.png" alt="" /></div>
-          <div><img src="newarival2.png" alt="" /></div>
-          <div><img src="newarival3.png" alt="" /></div>
-          
+          <div>
+            <img src="newarival1.png" alt="" />
+          </div>
+          <div>
+            <img src="newarival2.png" alt="" />
+          </div>
+          <div>
+            <img src="newarival3.png" alt="" />
+          </div>
         </div>
       </div>
+      <hr />
 
+      {/* ! Last */}
 
-
-
+      <Last />
+      
+      {/* ! Footer */}
+      <Footer />
     </div>
   );
 }

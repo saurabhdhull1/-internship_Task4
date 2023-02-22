@@ -3,7 +3,8 @@
   flex-direction: column;
   padding: 20px 60px;
   flex-wrap: wrap;
-  background-color: #f6f6f6;
+  background-color: transparent;
+  backdrop-filter: blur(10px);
 }
 .ourproduct1 {
   display: flex;

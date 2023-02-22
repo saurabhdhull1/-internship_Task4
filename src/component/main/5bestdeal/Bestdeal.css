@@ -1,6 +1,8 @@
 .bestdeal{
     padding: 20px;
-    background: linear-gradient(to bottom, #f9f4d4, white);
+    /* background: linear-gradient(to bottom, #f9f4d4, white); */
+    background-color: transparent;
+  backdrop-filter: blur(10px);
 }
 .bestdeal1{
     padding: 20px;
